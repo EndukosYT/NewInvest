@@ -1,0 +1,93 @@
+body {
+    display: grid;
+    background-image: url("../image/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+a, p, h1, h2, h3, h4, h5 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.navigation {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 222px;
+}
+
+.menu {
+    width: 767px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 16px;
+}
+
+.dropbar {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 37px 11px 37px;
+}
+
+.login {
+    background-color: #7b61ff;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid #7b61ff;
+
+    transition: all .2s linear;
+}
+
+.login:hover {
+    color: #7b61ff;
+    background-color: white;
+}
+
+.register {
+    background-color: white;
+    color: #7b61ff;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid white;
+
+    transition: all .2s linear;
+}
+
+.register:hover {
+    background-color: rgba(255,255,255,0);
+    color: white;
+}
+
+svg {
+    vertical-align: sub;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.lines {
+
+}
+
+
+
