@@ -1,12 +1,19 @@
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    height: 870px;
     display: grid;
     background-image: url("../image/img.png");
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: top;
+    background-size: cover;
 }
 
-a, p, h1, h2, h3, h4, h5 {
+a, p, h1, h2, h3, h4, h5, th {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -22,6 +29,7 @@ a, p, h1, h2, h3, h4, h5 {
     align-items: center;
     justify-content: center;
     gap: 222px;
+    height: 70%;
 }
 
 .menu {
@@ -81,13 +89,383 @@ svg {
 
 .main {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.ball {
+    margin-bottom: 132px;
+    margin-left: 227px;
+    height: 558px;
+    width: 1000px;
     position: relative;
-    justify-content: flex-end;
 }
 
-.lines {
+.ballBack {
+    position: absolute;
+
+    transition: all .5s ease;
+}
+
+.hero{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.heroTitle {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.heroText {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: white;
+    margin: 0;
+}
+
+.heroBtn {
+    background-color: #7b61ff;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid #7b61ff;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 21px 37px 19px 37px;
+    width: 190px;
+
+    transition: all .2s linear;
+}
+
+.heroBtn:hover {
+    background-color: white;
+    color: #7b61ff;
+}
+
+.investment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.investTitle {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    margin-top: 160px;
+    color: #333;
+}
+
+.investSubTitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #999;
+}
+
+.cards {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1400px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 480px;
+    margin: 20px;
+
+    background-color: white;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+
+    transition: box-shadow .3s ease;
+}
+
+.disabled:hover {
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.image {
+    position: relative;
+}
+
+.tags {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    padding: 8px 12px 6px 12px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.inside{
+    margin: 24px;
+}
+
+.insideTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 32px;
+    color: #333;
+}
+
+.insideSubTitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    color: #999;
+}
+
+.insideText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 24px 0 auto;
+
+    color: #333;
+}
+
+.bar {
+    margin-top: 24px;
+    width: 322px;
+    height: 8px;
+    background-color: #ECECEC;
+    position: relative;
+}
+
+.progressed {
+    position: absolute;
+    width: 182px;
+    height: 8px;
+    background-color: #7B61FF;
+    top: 0;
+    left: 0;
+}
+
+.barText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 8px 0  0;
+
+    color: #333;
+}
+
+.barHighlightedText {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7B61FF;
+}
+
+.tableBlock {
+    margin-top: 48px;
+}
+
+.insideTable {
+    table-layout: fixed;
+}
+
+.leftBlock {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #333;
+    text-align: start;
+}
+
+.rightBlock {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: #333;
+    text-align: end;
+}
+
+.cardsButton {
+    display: flex;
+    justify-content: center;
+    margin-top: -4px;
+}
+
+.cardBtn {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: #336EE1;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 22px;
+    width: 370px;
+    height: 23px;
+
+    transition: all .5s ease;
+}
+
+.cardBtn:hover {
+    font-size: 20px;
+    color: #336EE1;
+    background-color: rgba(51, 110, 225, 0.2);
+}
+
+.enabled{
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+}
+
+.enabled:hover {
+    cursor: pointer;
+}
+
+.allProjectsBtn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #336EE1;
+    background-color: white;
+    border: 1px solid #336EE1;
+    padding: 24px 40px 15px 40px;
+    line-height: 24px;
+    margin-top: 60px;
+    text-align: center;
+
+    transition: all .3s ease;
+}
+
+.allProjectsBtn:hover {
+    font-size: 24px;
+}
+
+.graph {
+    background: #ECF4FD;
+    height: 700px;
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.graphText {
+    width: 570px;
+    height: 376px;
+}
+
+.subtract {
+    transition: all .2s ease;
+}
+
+.subtract:hover {
+    rotate: -15deg;
+    transform: scale(115%);
+}
+
+.statTitle {
+    color: #333;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    margin: 40px 0 auto;
+}
+
+.statText {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #999;
+    margin: 24px 0 auto;
+}
+
+.graphicBlock {
+    width: 570px;
+    height: 376px;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+}
+
+.millions {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 310px;
+    margin-right: 20px;
+}
+
+.millionsText {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #333;
+}
+
+.chartSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graphicBlock {
+    transition: all .2s ease;
+}
+
+.graphicBlock:hover {
+    transform: scale(110%);
+}
+
+.years {
+    display: flex;
+    justify-content: space-between;
+    width: 448px;
 
 }
 
+.yearsText {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #333;
+    margin: 0;
+}
 
+@media (max-width: 1200px){
+
+}
 
